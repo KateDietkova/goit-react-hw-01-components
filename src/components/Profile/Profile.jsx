@@ -19,7 +19,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       ml="auto"
       borderRadius="normal"
       fontFamily="body"
-      boxShadow="1px 0px 7px 1px #888888"
+      boxShadow="1px 1px 4px -2px #888888"
     >
       <Box
         display="flex"
