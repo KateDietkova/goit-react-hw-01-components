@@ -19,6 +19,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       ml="auto"
       borderRadius="normal"
       fontFamily="body"
+      boxShadow="1px 0px 7px 1px #888888"
     >
       <Box
         display="flex"
@@ -33,7 +34,12 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
         <Location>{location}</Location>
       </Box>
 
-      <Box display="flex" justifyContent="space-between" bg="backgroundSecondary" as="ul">
+      <Box
+        display="flex"
+        justifyContent="space-between"
+        bg="backgroundSecondary"
+        as="ul"
+      >
         <StatsItem>
           <span>Followers</span>
           <StatsQuantity>{stats.followers}</StatsQuantity>
