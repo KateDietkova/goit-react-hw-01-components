@@ -17,6 +17,7 @@ export const Profile = ({ username, tag, location, avatar, stats }) => {
       width="300px"
       mr="auto"
       ml="auto"
+      mb={4}
       borderRadius="normal"
       fontFamily="body"
       boxShadow="1px 1px 4px -2px #888888"

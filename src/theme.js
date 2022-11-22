@@ -10,11 +10,12 @@ export const theme = {
     accent: '#609',
     muted: '#f6f6f6',
     borderColor: '#E5EBF3',
+    title: '#747578',
   },
   space: [0, 2, 4, 8, 16, 32, 48, 64, 128, 256],
   fonts: {
     body: 'Open Sans, system-ui, sans-serif',
-    heading: 'system-ui, sans-serif',
+    heading: 'Roboto, system-ui, sans-serif',
     monospace: 'Menlo, monospace',
   },
   fontSizes: {
