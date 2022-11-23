@@ -1,4 +1,5 @@
 import { Box } from 'components/Box/Box';
+import PropTypes from 'prop-types';
 import {
   Title,
   StatList,
@@ -22,13 +23,22 @@ export const Statistics = ({ title, stats }) => {
     >
       <Title>{title}</Title>
       <StatList>
-        {stats.map(statItem => (
-          <StatInfo key={statItem.id}>
-            <span>{statItem.label}</span>
-            <StatPercentage>{statItem.percentage}%</StatPercentage>
+        {stats.map(({ id, label, percentage }) => (
+          <StatInfo key={id}>
+            <span>{label}</span>
+            <StatPercentage>{percentage}%</StatPercentage>
           </StatInfo>
         ))}
       </StatList>
     </Box>
   );
+};
+
+Statistics.protoTypes = {
+  title: PropTypes.string.isRequired,
+  stats: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    percentage: PropTypes.number.isRequired,
+  }),
 };
