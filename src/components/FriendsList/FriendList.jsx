@@ -1,5 +1,5 @@
-import { FriendListItem } from '../FriendListItem/FriendListItem';
-import { FriendItemStyled } from '../FriendListItem/FriendListItem.styled';
+import { FriendListItem } from './FriendListItem';
+import { FriendItemStyled } from './FriendListItem.styled';
 import { FriendListStyled } from './FriendList.styled';
 import PropTypes from 'prop-types';
 
@@ -15,14 +15,10 @@ export const FriendList = ({ friends }) => {
   );
 };
 
-
 FriendList.propTypes = {
-    friends: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.number.isRequired,
-      })
+  friends: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+    })
   ),
 };
-
-
-
