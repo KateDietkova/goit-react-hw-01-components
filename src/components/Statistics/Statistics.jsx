@@ -16,6 +16,7 @@ export const Statistics = ({ title = null, stats }) => {
       width="300px"
       mr="auto"
       ml="auto"
+      mb={4}
       borderRadius="normal"
       fontFamily="body"
       boxShadow="1px 1px 4px -2px #888888"

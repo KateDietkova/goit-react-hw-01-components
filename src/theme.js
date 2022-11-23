@@ -11,6 +11,8 @@ export const theme = {
     muted: '#f6f6f6',
     borderColor: '#E5EBF3',
     title: '#747578',
+    online: '#28de37',
+    offline: '#f5341b',
   },
   space: [0, 2, 4, 8, 16, 32, 48, 64, 128, 256],
   fonts: {
@@ -41,6 +43,7 @@ export const theme = {
   radii: {
     none: '0',
     normal: '4px',
+    roundedSquere: '10px',
     round: '50%',
   },
 };

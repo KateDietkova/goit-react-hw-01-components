@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Avatar = styled.img`
-  border-radius: 50%;
+  border-radius: ${props => props.theme.radii.round};
   width: 100px;
   height: 100px;
   margin-bottom: ${props => props.theme.space[4]}px;
