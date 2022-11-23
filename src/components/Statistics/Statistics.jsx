@@ -7,7 +7,7 @@ import {
   StatPercentage,
 } from 'components/Statistics/Statistics.styled';
 
-export const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title = null, stats }) => {
   return (
     <Box
       bg="white"
@@ -21,7 +21,7 @@ export const Statistics = ({ title, stats }) => {
       boxShadow="1px 1px 4px -2px #888888"
       as="section"
     >
-      <Title>{title}</Title>
+      {title && <Title>{title}</Title>}
       <StatList>
         {stats.map(({ id, label, percentage }) => (
           <StatInfo key={id}>
