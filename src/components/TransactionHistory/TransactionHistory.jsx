@@ -5,6 +5,7 @@ import {
   TableHeadItem,
   TableHead,
 } from './TransactionHistory.styled';
+import PropTypes from 'prop-types';
 
 export const TransactionHistory = ({ items }) => {
   return (
@@ -30,4 +31,13 @@ export const TransactionHistory = ({ items }) => {
 
 function upperCaseHeaderTable(title) {
     return title.toUpperCase();
+}
+
+
+TransactionHistory.propTypes = {
+    items: PropTypes.arrayOf(
+        PropTypes.shape({
+           id: PropTypes.string.isRequired, 
+        }),
+    ),
 }
