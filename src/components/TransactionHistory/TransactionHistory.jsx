@@ -1,23 +1,33 @@
 import { TransactionHistoryItem } from './TransactionHistoryItem';
+import {
+  TransactionHistoryStyled,
+  TransactionHistoryRow,
+  TableHeadItem,
+  TableHead,
+} from './TransactionHistory.styled';
 
 export const TransactionHistory = ({ items }) => {
   return (
-    <table class="transaction-history">
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
+    <TransactionHistoryStyled>
+      <TableHead>
+        <TransactionHistoryRow>
+          <TableHeadItem>{upperCaseHeaderTable('Type')}</TableHeadItem>
+          <TableHeadItem>{upperCaseHeaderTable('Amount')}</TableHeadItem>
+          <TableHeadItem>{upperCaseHeaderTable('Currency')}</TableHeadItem>
+        </TransactionHistoryRow>
+      </TableHead>
 
       <tbody>
         {items.map(item => (
-          <tr key={item.id}>
+          <TransactionHistoryRow key={item.id}>
             <TransactionHistoryItem item={item} />
-          </tr>
+          </TransactionHistoryRow>
         ))}
       </tbody>
-    </table>
+    </TransactionHistoryStyled>
   );
 };
+
+function upperCaseHeaderTable(title) {
+    return title.toUpperCase();
+}

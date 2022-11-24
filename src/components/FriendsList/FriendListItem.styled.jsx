@@ -32,6 +32,7 @@ export const FriendAvatar = styled.img`
   margin-right: ${props => props.theme.space[3]}px;
   width: 48px;
   height: 48px;
+  box-shadow: 0px 1px 4px -1px;
 `;
 
 export const FriendName = styled.p`
