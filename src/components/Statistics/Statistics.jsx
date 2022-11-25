@@ -36,7 +36,7 @@ export const Statistics = ({ title = null, stats }) => {
 };
 
 Statistics.protoTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.shape({
     id: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
