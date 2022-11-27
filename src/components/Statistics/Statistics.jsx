@@ -35,7 +35,7 @@ export const Statistics = ({ title = null, stats }) => {
   );
 };
 
-Statistics.protoTypes = {
+Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.shape({
     id: PropTypes.string.isRequired,
